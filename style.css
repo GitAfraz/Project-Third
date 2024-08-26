@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    height: 70px;
+    padding: 0 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+}
+
+.dot-1 {
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.dot-2 {
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.nav-right {
+    display: flex;
+    text-decoration: none;
+    gap: 2.5vw;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-right h5{
+    display: none;
+}
+
+.bottomOfNav {
+    height: 50px;
+    align-items: center;
+    display: flex;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 0 2.5vw;
+    gap: 5vw;
+}
+
+.bottomOfNav a {
+    text-decoration: none;
+    color: black;
+}
+
+#content {
+    width: 100%;
+    height: calc(100% - 120px);
+}
+
+.elem {
+    display: flex;
+    width: 100%;
+    height: 40%;
+    padding: 50px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.elem::-webkit-scrollbar {
+    background-color: transparent;
+    height: 5px;
+}
+
+.elem::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+
+.Brands {
+    font-size: 6.5vw;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 100%;
+    width: 50%;
+}
+
+.images{
+    display: flex;
+    height: 60%;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.images::-webkit-scrollbar{
+    display: none;
+}
+
+.images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.img1{
+    object-position: 0 15%;
+}
+
+.img2{
+    object-position: 0 40%;
+}
+
+@media (max-width: 600px) {
+    .dot-1 {
+        width: 12px;
+        height: 12px;
+        background-color: black;
+        border-radius: 50%;
+    }
+    
+    .dot-2 {
+        width: 12px;
+        height: 12px;
+        background-color: black;
+        border-radius: 50%;
+    }
+
+    .nav-right a{
+        display: none;
+    }
+
+    .nav-right a:nth-child(1), .nav-right a:nth-child(2){
+        display: initial;
+        font-size: 9px;
+    }
+
+    .nav-right h5{
+        display: initial;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .bottomOfNav {
+        height: 200px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 0 2.5vw;
+        gap: 18px;
+    }
+
+    #content {
+        width: 100%;
+        height: calc(100% - 270px);
+    }
+
+    .Brands {
+        font-size: 9vw;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        height: 100%;
+        width: 75%;
+    }
+
+    .img1{
+        object-position: 1 15%;
+    }
+    
+    .img2{
+        object-position: 1 40%;
+    }
+}
